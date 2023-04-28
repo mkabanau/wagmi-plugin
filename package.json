@@ -1,0 +1,72 @@
+{
+  "name": "@mkabanau/wagmi-plugin",
+  "version": "0.0.1",
+  "description": "template for ts projects with ci/cd",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "test": "jest",
+    "build": "npx tsc"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testPathIgnorePatterns": [
+      "<rootDir>/dist/",
+      "<rootDir>/node_modules/",
+      "<rootDir>/.history/"
+    ],
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "globals": {
+      "ts-jest": {
+        "useESM": true
+      }
+    },
+    "preset": "ts-jest/presets/default-esm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkabanau/wagmi-plugin.git"
+  },
+  "keywords": [
+    "ci",
+    "cd",
+    "ts",
+    "registry"
+  ],
+  "author": "maksim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mkabanau/wagmi-plugin/issues"
+  },
+  "homepage": "https://github.com/mkabanau/wagmi-plugin#readme",
+  "devDependencies": {
+    "@types/jest": "^29.0.0",
+    "jest": "^28.1.3",
+    "ts-jest": "^28.0.8",
+    "typescript": "^4.8.2"
+  },
+  "publishConfig": {
+    "@mkabanau:registry": "https://npm.pkg.github.com"
+  },
+  "dependencies": {
+    "@mkabanau/core": "^0.11.4-test3",
+    "@mkabanau/default-plugins": "^0.11.4-test1",
+    "@mkabanau/ucans": "^0.11.4-test1",
+    "@transmute/universal-wallet": "^0.7.0-unstable.51",
+    "@types/node": "^18.15.11",
+    "ethers": "5.7.2",
+    "uint8arrays": "3.0.0",
+    "wagmi": "^0.12.10"
+  }
+}
